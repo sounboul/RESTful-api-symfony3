@@ -1,0 +1,30 @@
+fos_rest:
+    disable_csrf_role: ROLE_API
+    body_listener:
+        enabled: true
+    routing_loader:
+        include_format: false
+    param_fetcher_listener: 'force'
+    view:
+        formats:
+            json: true
+            xml:  true
+        view_response_listener: 'force'
+    format_listener:
+        rules:
+            - { path: '^/', priorities: ['json', 'xml'], fallback_format: 'json', prefer_extension: false }
+    serializer:
+        serialize_null:  true
+
+
+jms_serializer:
+    handlers:
+        datetime:
+            default_format: 'Y-m-d\\TH:i:sP'
+            default_timezone: UTC
+
+bazinga_hateoas:
+    metadata:
+        cache:                file
+        file_cache:
+            dir:              %kernel.cache_dir%/hateoas

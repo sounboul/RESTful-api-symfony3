@@ -1,0 +1,33 @@
+AppBundle\Entity\Place:
+    exclusion_policy: ALL   
+    xml_root_name: 'place'
+    properties:
+        id:
+            groups: ['place', 'price', 'theme']
+            expose: true
+        name:
+            groups: ['place', 'price', 'theme']
+            expose: true
+        address:
+            groups: ['place', 'price', 'theme']
+            expose: true
+        prices:
+            groups: ['place']
+            expose: true
+        themes:
+            groups: ['place']
+            expose: true
+   
+    # relations:
+    #     - rel: self
+    #       href:
+    #             route: get_place 
+    #             parameters:
+    #                 id: expr(object.getId())                    
+    #             absolute: false          
+    #     - rel: list
+    #       href:
+    #             route: get_places 
+    #       exclude_if:
+    #             "expr(object.getId()) ": ~
+        

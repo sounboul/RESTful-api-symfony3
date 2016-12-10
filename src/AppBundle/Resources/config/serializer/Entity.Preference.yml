@@ -1,0 +1,24 @@
+AppBundle\Entity\Preference:    
+    exclusion_policy: ALL   
+    xml_root_name: preference
+    properties:
+        id:
+            groups: ['user', 'preference']
+            expose: true
+        name:
+            groups: ['user', 'preference']
+            expose: true
+        value:
+            groups: ['user', 'preference']
+            expose: true
+        user:
+            groups: ['preference']
+            expose: true
+
+    relations:
+        - rel: self
+          href:
+                route: get_preferences
+                parameters:
+                    id: expr(object.getPreferences().getId())                    
+                absolute: false 

@@ -47,6 +47,10 @@ class ComposerStaticInitbdff5614a5040c9bc96440c34031e35c
             'Psr\\Log\\' => 8,
             'Psr\\Cache\\' => 10,
         ),
+        'N' => 
+        array (
+            'Negotiation\\' => 12,
+        ),
         'M' => 
         array (
             'Monolog\\' => 8,
@@ -54,6 +58,10 @@ class ComposerStaticInitbdff5614a5040c9bc96440c34031e35c
         'I' => 
         array (
             'Incenteev\\ParameterHandler\\' => 27,
+        ),
+        'F' => 
+        array (
+            'FOS\\RestBundle\\' => 15,
         ),
         'D' => 
         array (
@@ -146,6 +154,10 @@ class ComposerStaticInitbdff5614a5040c9bc96440c34031e35c
         array (
             0 => __DIR__ . '/..' . '/psr/cache/src',
         ),
+        'Negotiation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/willdurand/negotiation/src/Negotiation',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -153,6 +165,10 @@ class ComposerStaticInitbdff5614a5040c9bc96440c34031e35c
         'Incenteev\\ParameterHandler\\' => 
         array (
             0 => __DIR__ . '/..' . '/incenteev/composer-parameter-handler',
+        ),
+        'FOS\\RestBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/friendsofsymfony/rest-bundle',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
@@ -195,6 +211,65 @@ class ComposerStaticInitbdff5614a5040c9bc96440c34031e35c
                 0 => __DIR__ . '/..' . '/sensiolabs/security-checker',
             ),
         ),
+        'P' => 
+        array (
+            'PhpOption\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/phpoption/phpoption/src',
+            ),
+            'PhpCollection' => 
+            array (
+                0 => __DIR__ . '/..' . '/phpcollection/phpcollection/src',
+            ),
+            'Pagerfanta\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/pagerfanta/pagerfanta/src',
+            ),
+        ),
+        'N' => 
+        array (
+            'Nelmio\\ApiDocBundle' => 
+            array (
+                0 => __DIR__ . '/..' . '/nelmio/api-doc-bundle',
+            ),
+        ),
+        'M' => 
+        array (
+            'Michelf' => 
+            array (
+                0 => __DIR__ . '/..' . '/michelf/php-markdown',
+            ),
+            'Metadata\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/jms/metadata/src',
+            ),
+        ),
+        'J' => 
+        array (
+            'JsonpCallbackValidator' => 
+            array (
+                0 => __DIR__ . '/..' . '/willdurand/jsonp-callback-validator/src',
+            ),
+            'JMS\\SerializerBundle' => 
+            array (
+                0 => __DIR__ . '/..' . '/jms/serializer-bundle',
+            ),
+            'JMS\\Serializer' => 
+            array (
+                0 => __DIR__ . '/..' . '/jms/serializer/src',
+            ),
+            'JMS\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/jms/parser-lib/src',
+            ),
+        ),
+        'H' => 
+        array (
+            'Hateoas' => 
+            array (
+                0 => __DIR__ . '/..' . '/willdurand/hateoas/src',
+            ),
+        ),
         'D' => 
         array (
             'Doctrine\\ORM\\' => 
@@ -222,11 +297,18 @@ class ComposerStaticInitbdff5614a5040c9bc96440c34031e35c
                 0 => __DIR__ . '/..' . '/doctrine/annotations/lib',
             ),
         ),
+        'B' => 
+        array (
+            'Bazinga\\Bundle\\HateoasBundle' => 
+            array (
+                0 => __DIR__ . '/..' . '/willdurand/hateoas-bundle',
+            ),
+        ),
     );
 
     public static $classMap = array (
-        'AppCache' => __DIR__ . '/../..' . '/app/AppCache.php',
-        'AppKernel' => __DIR__ . '/../..' . '/app/AppKernel.php',
+        'AppCache' => __DIR__ . '/../..' . '/../../../../../wamp/www/restful/rest-api/restful-api-symfony3/app/AppCache.php',
+        'AppKernel' => __DIR__ . '/../..' . '/../../../../../wamp/www/restful/rest-api/restful-api-symfony3/app/AppKernel.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
         'Collator' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/Intl/Resources/stubs/Collator.php',

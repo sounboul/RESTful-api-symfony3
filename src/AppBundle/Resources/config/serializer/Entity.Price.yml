@@ -1,0 +1,26 @@
+AppBundle\Entity\Price:
+    exclusion_policy: ALL
+    xml_root_name: price
+    properties:
+        id:
+            groups: ['place', 'price']
+            expose: true
+        type:
+            groups: ['place', 'price']
+            expose: true
+        value:
+            groups: ['place', 'price']
+            expose: true
+        place:
+            groups: ['price']
+            expose: true
+
+    relations:
+        - 
+            rel: self
+            href:
+                route: get_prices
+                parameters:
+                    id: expr(object.getPlace().getId())                    
+                absolute: false          
+       

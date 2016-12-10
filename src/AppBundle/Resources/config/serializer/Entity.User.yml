@@ -1,0 +1,39 @@
+AppBundle\Entity\User:
+    exclusion_policy: ALL    
+    xml_root_name: preference
+    properties:
+        id:
+            groups: ['user', 'preference']
+            expose: true
+        firstname:
+            groups: ['user', 'preference']
+            expose: true
+        lastname:
+            groups: ['user', 'preference']
+            expose: true
+        email:
+            groups: ['user', 'preference']
+            expose: true
+        preferences:
+            groups: ['user']
+            expose: true
+    relations:
+        - rel: self
+          href:
+                route: get_user 
+                parameters:
+                    user_id: expr(object.getId())
+                    page: 1
+                absolute: false
+          embedded:
+                content: expr(object.getPreferences())
+                xmlElementName: users
+                exclusion:            
+                    exclude_if: expr(object.getPreferences() === null)         
+          exclude_if:
+                "expr(object.getId()) ": ~
+        - rel: list
+          href:
+                route: get_users 
+          exclude_if:
+                "expr(object.getId()) ": ~

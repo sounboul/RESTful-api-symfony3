@@ -1,0 +1,23 @@
+AppBundle\Entity\Theme:
+    exclusion_policy: ALL
+    xml_root_name: theme
+    properties:
+        id:
+            groups: ['place', 'theme']
+            expose: true
+        name:
+            groups: ['place', 'theme']
+            expose: true
+        value:
+            groups: ['place', 'theme']
+            expose: true
+        place:
+            groups: ['theme']
+            expose: true
+    relations:
+        - rel: self
+          href:
+                route: get_themes
+                parameters:
+                    id: expr(object.getPlace().getId())                    
+                absolute: false 

@@ -1,3 +1,5 @@
+# imports:    
+#     - { resource: '@AppBundle/Resources/config/security.yml' }
 # To get started with security, check out the documentation:
 # http://symfony.com/doc/current/security.html
 security:
@@ -22,3 +24,6 @@ security:
 
             # form_login: ~
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+        doc:
+            pattern:  ^/api/documentation
+            security: false

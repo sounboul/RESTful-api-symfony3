@@ -1,0 +1,23 @@
+places:
+    type:     rest
+    resource: AppBundle\Controller\PlaceController
+
+users:
+    type:     rest
+    resource: AppBundle\Controller\UserController
+
+prices:
+    type:     rest
+    resource: AppBundle\Controller\Place\PriceController
+
+themes:
+    type:     rest
+    resource: AppBundle\Controller\Place\ThemeController
+
+preferences:
+    type:     rest
+    resource: AppBundle\Controller\User\PreferenceController
+
+nelmio-api-doc:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /documentation
